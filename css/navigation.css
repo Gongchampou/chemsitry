@@ -1,0 +1,132 @@
+/* ========================================
+   NAVIGATION STYLES
+   ========================================
+   Styles for the top navigation bar and navigation elements.
+   The navbar is sticky (stays at top when scrolling).
+*/
+
+/* Main Navigation Bar Container
+   Fixed positioning keeps it always visible at the top regardless of scroll direction */
+.navbar {
+    background-color: var(--nav-bg);      /* Background from CSS variable */
+    padding: 0.75rem 0;                   /* Vertical padding, no horizontal */
+    box-shadow: var(--shadow);            /* Subtle shadow for depth */
+    position: fixed !important;            /* Fixed position - ALWAYS visible, never moves */
+    top: 0 !important;                    /* Position at very top - enforced */
+    left: 0 !important;                    /* Start from left edge - enforced */
+    right: 0 !important;                   /* Extend to right edge - enforced */
+    z-index: 1000 !important;             /* High z-index to stay above content - enforced */
+    width: 100% !important;               /* Full width - enforced */
+    margin: 0 !important;                 /* No margin - enforced */
+}
+
+/* Navigation Container - Inner wrapper
+   Limits content width and centers navigation items */
+.nav-container {
+    width: 100%;                          /* Full width */
+    margin: 0 auto;                      /* Center horizontally */
+    display: flex;                        /* Flexbox layout */
+    justify-content: space-between;       /* Space between logo and nav items */
+    align-items: center;                  /* Vertically center items */
+    flex-wrap: wrap;                      /* Wrap on smaller screens */
+    padding: 0 1.5rem;                    /* Horizontal padding */
+}
+
+/* Logo/Brand Name Styling */
+.logo {
+    color: white;                         /* White text */
+    font-size: 1.5rem;                   /* Larger font size */
+    font-weight: bold;                   /* Bold text */
+    text-decoration: none;               /* Remove underline from link */
+}
+
+/* Navigation Links Container
+   Flexbox list for horizontal navigation items */
+.nav-links {
+    display: flex;                        /* Horizontal flex layout */
+    list-style: none;                    /* Remove bullet points */
+    gap: 1.25rem;                        /* Space between links */
+    flex-wrap: wrap;                      /* Wrap on smaller screens */
+}
+
+/* Individual Navigation Links */
+.nav-links a {
+    color: white;                         /* White text */
+    text-decoration: none;               /* Remove underline */
+    transition: opacity 0.3s;            /* Smooth hover effect */
+}
+
+/* Navigation Link Hover Effect */
+.nav-links a:hover {
+    opacity: 0.8;                        /* Slightly transparent on hover */
+}
+
+/* Theme Toggle Button
+   Small icon-only button to switch between light and dark themes */
+.theme-toggle {
+    background: rgba(255,255,255,0.2);   /* Semi-transparent white */
+    border: none;                         /* No border */
+    color: white;                         /* White icon */
+    padding: 0.5rem;                      /* Small padding for icon */
+    border-radius: 50%;                   /* Circular button */
+    cursor: pointer;                       /* Pointer cursor on hover */
+    font-size: 1.2rem;                    /* Icon size */
+    width: 2.5rem;                         /* Fixed width for circular button */
+    height: 2.5rem;                        /* Fixed height for circular button */
+    display: flex;                         /* Flexbox for centering icon */
+    align-items: center;                   /* Vertical center */
+    justify-content: center;               /* Horizontal center */
+    transition: all 0.3s;                  /* Smooth transitions */
+    position: relative;                    /* For tooltip positioning */
+}
+
+/* Theme Toggle Hover Effect */
+.theme-toggle:hover {
+    background: rgba(255,255,255,0.3);   /* More opaque on hover */
+    transform: scale(1.1);                 /* Slight scale up on hover */
+}
+
+/* Tooltip for Theme Toggle */
+.theme-toggle::after {
+    content: attr(data-tooltip);           /* Tooltip text from data attribute */
+    position: absolute;                     /* Absolute positioning */
+    right: calc(100% + 0.75rem);           /* Position to the left of button with gap */
+    top: 50%;                               /* Center vertically */
+    transform: translateY(-50%);            /* Perfect vertical centering */
+    background: rgba(0, 0, 0, 0.8);        /* Dark semi-transparent background */
+    color: white;                          /* White text */
+    padding: 0.375rem 0.75rem;            /* Padding */
+    border-radius: 4px;                    /* Rounded corners */
+    font-size: 0.75rem;                    /* Small font */
+    white-space: nowrap;                   /* Single line */
+    opacity: 0;                            /* Hidden by default */
+    pointer-events: none;                  /* Don't interfere with clicks */
+    transition: opacity 0.3s;              /* Fade in/out */
+    z-index: 1001;                         /* Above other elements */
+}
+
+/* Show tooltip on hover */
+.theme-toggle:hover::after {
+    opacity: 1;                           /* Show tooltip on hover */
+}
+
+/* Arrow pointing right from tooltip (pointing to button) */
+.theme-toggle::before {
+    content: '';                           /* Empty content for pseudo-element */
+    position: absolute;                     /* Absolute positioning */
+    right: -0.5rem;                        /* Position at right edge of tooltip */
+    top: 50%;                               /* Center vertically */
+    transform: translateY(-50%);            /* Perfect vertical centering */
+    border: 4px solid transparent;         /* Transparent borders */
+    border-left-color: rgba(0, 0, 0, 0.8);  /* Left border creates arrow pointing right */
+    opacity: 0;                            /* Hidden by default */
+    pointer-events: none;                  /* Don't interfere with clicks */
+    transition: opacity 0.3s;              /* Fade in/out */
+    z-index: 1001;                         /* Above other elements */
+}
+
+/* Show arrow on hover */
+.theme-toggle:hover::before {
+    opacity: 1;                            /* Show arrow on hover */
+}
+

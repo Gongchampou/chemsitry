@@ -1,0 +1,125 @@
+/* ========================================
+   COMPONENT STYLES
+   ========================================
+   Reusable UI components: buttons, forms, inputs, facts section.
+   These components are used across multiple pages.
+*/
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+/* Primary Button - Main action button style
+   Used for submit actions, primary CTAs */
+.btn {
+    background: var(--primary-color);     /* Blue background */
+    color: white;                         /* White text */
+    padding: 0.625rem 1.5rem;            /* Comfortable padding */
+    border: none;                         /* No border */
+    border-radius: 5px;                   /* Rounded corners */
+    cursor: pointer;                      /* Pointer cursor */
+    font-size: 0.95rem;                  /* Slightly smaller than body text */
+    font-weight: 500;                     /* Medium font weight */
+    transition: background 0.3s;          /* Smooth color transition */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: #1976D2;                  /* Darker blue on hover */
+}
+
+/* ========================================
+   FORMS & INPUTS
+   ======================================== */
+
+/* Input Group - Container for label and input field */
+.input-group {
+    margin-bottom: 0.875rem;             /* Space below each input group */
+}
+
+/* Input Group Label - Text label above input field */
+.input-group label {
+    display: block;                       /* Block element (full width) */
+    margin-bottom: 0.5rem;               /* Space between label and input */
+    color: var(--text-color);            /* Text color */
+}
+
+/* Input Field - Text input box */
+.input-group input {
+    width: 100%;                         /* Full width */
+    padding: 0.625rem 0.875rem;         /* Comfortable padding */
+    font-size: 1rem;                     /* Standard font size */
+    border: 2px solid var(--border-color);  /* Border */
+    border-radius: 5px;                   /* Rounded corners */
+    background: var(--bg-color);          /* Background color */
+    color: var(--text-color);            /* Text color */
+}
+
+/* Form Group - Container for form fields (used in contact page) */
+.form-group {
+    margin-bottom: 1.25rem;              /* Space below each form group */
+}
+
+/* Form Label - Label for form fields */
+.form-group label {
+    display: block;                      /* Block element */
+    margin-bottom: 0.5rem;               /* Space below label */
+    color: var(--text-color);            /* Text color */
+}
+
+/* Form Input - Text input in forms */
+.form-group input,
+.form-group textarea {
+    width: 100%;                         /* Full width */
+    padding: 0.625rem 0.875rem;         /* Padding */
+    border: 2px solid var(--border-color);  /* Border */
+    border-radius: 5px;                   /* Rounded corners */
+    background: var(--bg-color);          /* Background */
+    color: var(--text-color);            /* Text color */
+    font-family: inherit;                /* Inherit font family */
+}
+
+/* Textarea - Multi-line text input */
+.form-group textarea {
+    resize: vertical;                    /* Allow vertical resizing only */
+    min-height: 120px;                   /* Minimum height */
+}
+
+/* Result Box - Container for displaying results (equation balancer, etc.) */
+.result {
+    margin-top: 1rem;                    /* Space above */
+    padding: 1rem;                       /* Padding */
+    background: var(--bg-color);         /* Background */
+    border-radius: 5px;                   /* Rounded corners */
+    border-left: 4px solid var(--primary-color);  /* Blue left border accent */
+}
+
+/* ========================================
+   TODAY'S FACT SECTION
+   ========================================
+   Featured fact box that displays rotating chemistry facts.
+*/
+
+/* Today's Fact Container */
+.todays-fact {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));  /* Blue to green gradient */
+    color: white;                         /* White text */
+    padding: 1.5rem;                      /* Padding */
+    border-radius: 8px;                   /* Rounded corners */
+    margin: 1.5rem 0;                    /* Vertical margins */
+    text-align: center;                   /* Center align text */
+}
+
+/* Today's Fact Heading */
+.todays-fact h2 {
+    margin-bottom: 0.75rem;               /* Space below heading */
+    font-size: 1.5rem;                   /* Large font size */
+}
+
+/* Today's Fact Content - The actual fact text */
+.fact-content {
+    font-size: 1.1rem;                   /* Slightly larger font */
+    font-style: italic;                   /* Italic text */
+    line-height: 1.6;                     /* Comfortable line spacing */
+}
+

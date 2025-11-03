@@ -1,0 +1,63 @@
+/* ========================================
+   CHEMISTRY EDUCATION PORTAL - MAIN STYLESHEET
+   ========================================
+   
+   This is the main CSS file that imports all component stylesheets.
+   It ensures proper loading order and maintains separation of concerns.
+   
+   FILE STRUCTURE:
+   - base.css: Variables, reset, and base styles
+   - navigation.css: Navbar and navigation elements
+   - hero.css: Hero sections and banners
+   - layout.css: Containers, cards, grids
+   - components.css: Buttons, forms, reusable components
+   - periodic-table.css: Periodic table and element styles
+   - interactive.css: Quizzes, flashcards, collapsibles
+   - modal.css: Element detail modal dialog
+   - footer.css: Footer styles
+   - responsive.css: Mobile and tablet media queries
+   
+   To edit specific styles, find the relevant CSS file above.
+*/
+
+/* Import all component stylesheets in proper order */
+@import url('base.css');              /* Base variables and reset - must be first */
+@import url('navigation.css');        /* Navigation bar */
+@import url('hero.css');              /* Hero sections */
+@import url('layout.css');            /* Layout and cards */
+@import url('components.css');        /* Buttons, forms, facts */
+@import url('periodic-table.css');    /* Periodic table */
+@import url('interactive.css');       /* Quizzes, flashcards */
+@import url('modal.css');             /* Element detail modal */
+@import url('footer.css');            /* Footer */
+@import url('responsive.css');        /* Responsive design - must be last */
+
+/* ========================================
+   ADDITIONAL UTILITIES
+   ========================================
+   Small utility classes that don't fit in other files.
+*/
+
+/* Loading Animation - Spinner for loading states */
+.loading {
+    display: inline-block;              /* Inline block element */
+    width: 20px;                        /* Width */
+    height: 20px;                        /* Height */
+    border: 3px solid rgba(255,255,255,.3);  /* Light border */
+    border-radius: 50%;                  /* Perfect circle */
+    border-top-color: white;              /* Top border color */
+    animation: spin 1s ease-in-out infinite;  /* Continuous rotation */
+}
+
+/* Spin Animation - Rotates loading spinner */
+@keyframes spin {
+    to { transform: rotate(360deg); }     /* Full rotation */
+}
+
+/* SVG Icons - Base styling for SVG icon elements */
+.svg-icon {
+    width: 24px;                         /* Icon width */
+    height: 24px;                        /* Icon height */
+    display: inline-block;               /* Inline block */
+    vertical-align: middle;              /* Vertical alignment */
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Chemistry Education Portal. Send feedback, questions, or suggestions about the website.">
+    <meta name="keywords" content="contact chemistry education, feedback, questions, chemistry website">
+    <title>Contact Us - Chemistry Education Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚗️ Chemistry Portal</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#tools">Tools</a></li>
+                <li><a href="index.html#learning">Learning</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode" data-tooltip="Switch to Dark Mode">🌙</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero" style="padding: 2rem;">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Send us your questions, feedback, or suggestions.</p>
+        </section>
+
+        <section class="card">
+            <h2>Get in Touch</h2>
+            <p>Have a question about chemistry concepts? Found an error? Want to suggest new features or content? We welcome all feedback!</p>
+            
+            <form id="contact-form" action="mailto:chemistry@example.com" method="post" enctype="text/plain" style="margin-top: 2rem;">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div style="margin-top: 2rem; padding: 1rem; background: var(--card-bg); border-radius: 5px;">
+                <p><strong>Note:</strong> This form uses a mailto link. Your default email client will open when you submit. If you prefer, you can copy the information and send it manually, or modify the form action to point to your email service.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Other Ways to Reach Us</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📧 Email</h3>
+                    <p>For general inquiries:</p>
+                    <p><a href="mailto:chemistry@example.com" style="color: var(--primary-color);">chemistry@example.com</a></p>
+                </div>
+                <div class="card">
+                    <h3>💬 Feedback</h3>
+                    <p>Found a bug or have a suggestion?</p>
+                    <p>Please use the contact form above or email us directly.</p>
+                </div>
+                <div class="card">
+                    <h3>📚 Educational Resources</h3>
+                    <p>Looking for specific chemistry topics?</p>
+                    <p>Explore our <a href="index.html#learning" style="color: var(--primary-color);">Learning Zone</a> or browse the <a href="index.html" style="color: var(--primary-color);">branch pages</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Frequently Asked Questions</h2>
+            <p>Before contacting us, you might find answers in our <a href="faq.html" style="color: var(--primary-color);">FAQ page</a>.</p>
+        </section>
+
+        <section class="card">
+            <h2>Contributing</h2>
+            <p>This is an educational website. If you're an educator, researcher, or chemistry enthusiast and would like to contribute content, improve explanations, or add new features, we welcome contributions!</p>
+            
+            <h3>Ways to Contribute:</h3>
+            <ul>
+                <li>Report errors or inaccuracies</li>
+                <li>Suggest new topics or examples</li>
+                <li>Improve explanations for clarity</li>
+                <li>Add more quiz questions</li>
+                <li>Suggest new interactive tools</li>
+                <li>Improve accessibility</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <p>&copy; 2024 Chemistry Education Portal. All rights reserved. Educational use only.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form validation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailPattern.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            
+            // Form will use mailto: link
+            // In a real application, you might want to use a service like Formspree
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,313 @@
+/* ========================================
+   PERIODIC TABLE STYLES
+   ========================================
+   Styles for the interactive periodic table, search, filters, and element cards.
+   This includes all styling for the periodic table interface.
+*/
+
+/* Periodic Table Container - Wrapper for table and controls */
+.periodic-table-container {
+    margin: 1.5rem 0;                    /* Vertical spacing */
+}
+
+/* Periodic Table Header Banner - Professional header matching reference design */
+.periodic-table-header {
+    background: linear-gradient(135deg, #1976D2, #1565C0);  /* Blue gradient */
+    color: white;                         /* White text */
+    padding: 1rem 1.5rem;                /* Padding */
+    border-radius: 8px 8px 0 0;          /* Rounded top corners */
+    margin-bottom: 1rem;                  /* Space below */
+    text-align: center;                   /* Center align */
+}
+
+.periodic-table-header h2 {
+    margin: 0;                            /* Remove default margin */
+    font-size: 1.5rem;                   /* Large font size */
+    font-weight: 700;                    /* Bold */
+    letter-spacing: 0.1em;               /* Letter spacing for professional look */
+    text-transform: uppercase;            /* Uppercase text */
+}
+
+/* Search Box - Input field for searching elements
+   Users can search by name, symbol, or atomic number */
+.search-box {
+    width: 100%;                          /* Full width */
+    padding: 0.875rem 1rem;              /* Comfortable padding */
+    font-size: 1rem;                     /* Standard font size */
+    border: 2px solid var(--border-color);  /* Border using CSS variable */
+    border-radius: 5px;                  /* Rounded corners */
+    margin-bottom: 1rem;                  /* Space below */
+    background: var(--card-bg);          /* Background color */
+    color: var(--text-color);            /* Text color */
+    transition: border-color 0.3s;       /* Smooth border color change */
+}
+
+/* Search Box Focus State - Highlights when user clicks inside */
+.search-box:focus {
+    outline: none;                        /* Remove default browser outline */
+    border-color: var(--primary-color);   /* Blue border when focused */
+}
+
+/* Filter Buttons Container - Wrapper for category filter buttons */
+.filter-buttons {
+    display: flex;                        /* Horizontal flex layout */
+    gap: 0.5rem;                         /* Space between buttons */
+    flex-wrap: wrap;                      /* Wrap to new line if needed */
+    margin-bottom: 1rem;                  /* Space below */
+}
+
+/* Filter Button - Individual category filter button
+   Used to filter elements by type (metals, nonmetals, etc.) */
+.filter-btn {
+    padding: 0.5rem 1rem;                /* Button padding */
+    border: 2px solid var(--primary-color);  /* Blue border */
+    background: var(--bg-color);          /* Background color */
+    color: var(--primary-color);          /* Blue text */
+    border-radius: 5px;                   /* Rounded corners */
+    cursor: pointer;                      /* Pointer cursor */
+    transition: all 0.3s;                 /* Smooth transitions */
+    font-weight: 500;                     /* Medium font weight */
+    font-size: 0.9rem;                   /* Slightly smaller font */
+}
+
+/* Filter Button Active/Hover State - Shows selected filter */
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);     /* Blue background */
+    color: white;                         /* White text */
+}
+
+/* Periodic Table Grid - Main table container
+   Uses CSS Grid with 18 columns (standard periodic table layout)
+   Professional spacing and layout matching reference design */
+.periodic-table {
+    display: grid;                        /* CSS Grid layout */
+    grid-template-columns: repeat(18, 1fr);  /* 18 equal columns */
+    gap: 3px;                            /* Tight gap between elements for clean look */
+    margin: 1.5rem auto;                  /* Vertical margin, center horizontally */
+    width: 100%;                         /* Full width */
+    max-width: 1400px;                   /* Maximum width for very large screens */
+    background: #f8f9fa;                /* Light gray background for table */
+    padding: 0.75rem;                    /* Padding around table */
+    border-radius: 8px;                   /* Rounded corners */
+}
+
+/* Lanthanoids Row - Separate row below main table */
+.periodic-table-lanthanoids {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);  /* 15 lanthanoids */
+    gap: 3px;
+    margin: 0.75rem auto 0;
+    width: calc(100% - 16.67%);           /* Align with main table (offset by ~3 columns) */
+    max-width: calc(1400px * 15/18);
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+/* Actinoids Row - Separate row below lanthanoids */
+.periodic-table-actinoids {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);  /* 15 actinoids */
+    gap: 3px;
+    margin: 0.75rem auto 0;
+    width: calc(100% - 16.67%);           /* Align with main table */
+    max-width: calc(1400px * 15/18);
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Placeholder cells - Empty cells in main table grid */
+.element-placeholder {
+    aspect-ratio: 1;
+    min-height: 60px;
+    visibility: hidden;  /* Invisible but takes up space */
+}
+
+/* Individual Element Box - Each chemical element in the table
+   Professional design matching standard periodic table layouts */
+.element {
+    aspect-ratio: 1;                     /* Perfect square (1:1 ratio) */
+    border: 1.5px solid rgba(0, 0, 0, 0.15);  /* Subtle border for professional look */
+    border-radius: 6px;                   /* Rounded corners */
+    padding: 0.375rem 0.25rem;           /* Internal padding - tighter for clean look */
+    cursor: pointer;                      /* Pointer cursor (clickable) */
+    transition: all 0.2s ease;           /* Smooth animations */
+    background: var(--card-bg);           /* Background color */
+    position: relative;                   /* Positioning context for tooltip */
+    display: flex;                        /* Flexbox for content alignment */
+    flex-direction: column;               /* Stack content vertically */
+    justify-content: space-between;       /* Space between atomic number and name */
+    min-height: 60px;                     /* Minimum height for readability */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Element Hover Effect - Slight lift and shadow when hovered */
+.element:hover {
+    transform: translateY(-2px) scale(1.02);  /* Slight lift and scale */
+    z-index: 10;                         /* Bring to front */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);  /* Enhanced shadow */
+    border-color: rgba(0, 0, 0, 0.3);    /* Darker border on hover */
+}
+
+/* Hidden Element - Used when filtering/searching */
+.element.hidden {
+    display: none;                        /* Completely hide element */
+}
+
+/* Element Atomic Number - Small number in top-left corner
+   Positioned absolutely for precise placement */
+.element-number {
+    position: absolute;                   /* Absolute positioning */
+    top: 0.25rem;                        /* Distance from top */
+    left: 0.25rem;                       /* Distance from left */
+    font-size: 0.65rem;                  /* Small font size */
+    font-weight: 600;                     /* Semi-bold for readability */
+    color: #333;                         /* Dark gray for contrast */
+    line-height: 1;                      /* Tight line height */
+}
+
+/* Element Symbol - Large, bold, centered chemical symbol
+   Most prominent feature of each element box */
+.element-symbol {
+    font-size: 1.4rem;                   /* Large, prominent font */
+    font-weight: 700;                    /* Bold text */
+    color: #1a1a1a;                      /* Very dark for maximum contrast */
+    text-align: center;                  /* Center alignment */
+    margin: auto 0;                      /* Vertical centering */
+    line-height: 1.2;                    /* Comfortable line height */
+    letter-spacing: 0;                   /* No letter spacing */
+}
+
+/* Element Name - Full name below symbol, smaller font
+   Positioned at bottom for clear hierarchy */
+.element-name {
+    font-size: 0.55rem;                  /* Small but readable */
+    color: #444;                         /* Medium gray for secondary information */
+    text-align: center;                  /* Center alignment */
+    margin-top: 0.125rem;                /* Small space from symbol */
+    line-height: 1.1;                    /* Tight line height */
+    font-weight: 500;                     /* Medium weight */
+}
+
+/* ========================================
+   ELEMENT CATEGORY COLORS (Light Theme)
+   ========================================
+   Professional color scheme matching reference design.
+   Each category has distinct, professional colors for easy identification.
+*/
+
+/* Alkali Metals - Group 1 elements (H, Li, Na, K, Rb, Cs, Fr)
+   Red color matching reference design */
+.element.alkali-metal { 
+    background: #FF6B6B; 
+    color: #000;
+}
+
+/* Alkaline Earth Metals - Group 2 elements (Be, Mg, Ca, Sr, Ba, Ra)
+   Red color (same as alkali metals in reference design) */
+.element.alkaline-earth { 
+    background: #FF6B6B; 
+    color: #000;
+}
+
+/* Transition Metals - Groups 3-12 (Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, Zn, etc.)
+   Brown/Tan color matching reference design */
+.element.transition-metal { 
+    background: #D4A574; 
+    color: #000;
+}
+
+/* Post-Transition Metals and Metalloids (Al, Si, Ga, Ge, As, Sn, Sb, Tl, Pb, Bi, etc.)
+   Orange/Reddish-Orange color matching reference design */
+.element.metalloid { 
+    background: #FF8C69; 
+    color: #000;
+}
+
+/* Nonmetals - Elements that are not metals (B, C, N, O, F, S, Se, Br, I)
+   Green color matching reference design */
+.element.nonmetal { 
+    background: #90EE90; 
+    color: #000;
+}
+
+/* Noble Gases - Group 18 elements (He, Ne, Ar, Kr, Xe, Rn, Og)
+   Green color (same as nonmetals in reference design) */
+.element.noble-gas { 
+    background: #90EE90; 
+    color: #000;
+}
+
+/* Lanthanides - Rare earth elements (La, Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu)
+   Light Orange/Peach color matching reference design */
+.element.lanthanide { 
+    background: #FFBFA0; 
+    color: #000;
+}
+
+/* Actinides - Radioactive elements (Ac, Th, Pa, U, Np, Pu, Am, Cm, Bk, Cf, Es, Fm, Md, No, Lr)
+   Light Blue color matching reference design */
+.element.actinide { 
+    background: #87CEEB; 
+    color: #000;
+}
+
+/* ========================================
+   ELEMENT CATEGORY COLORS (Dark Theme)
+   ========================================
+   Darker versions of colors for dark mode theme while maintaining contrast.
+*/
+[data-theme="dark"] .element.alkali-metal { 
+    background: #CC5555; 
+    color: #fff;
+}
+[data-theme="dark"] .element.alkaline-earth { 
+    background: #CC5555; 
+    color: #fff;
+}
+[data-theme="dark"] .element.transition-metal { 
+    background: #A08554; 
+    color: #fff;
+}
+[data-theme="dark"] .element.metalloid { 
+    background: #CC6F50; 
+    color: #fff;
+}
+[data-theme="dark"] .element.nonmetal { 
+    background: #70CC70; 
+    color: #000;
+}
+[data-theme="dark"] .element.noble-gas { 
+    background: #70CC70; 
+    color: #000;
+}
+[data-theme="dark"] .element.lanthanide { 
+    background: #CC9980; 
+    color: #000;
+}
+[data-theme="dark"] .element.actinide { 
+    background: #67A9BC; 
+    color: #000;
+}
+
+/* Tooltip - Hover information box that appears above elements */
+.tooltip {
+    position: absolute;                   /* Absolute positioning */
+    background: rgba(0,0,0,0.9);        /* Dark semi-transparent background */
+    color: white;                         /* White text */
+    padding: 1rem;                       /* Padding */
+    border-radius: 5px;                   /* Rounded corners */
+    pointer-events: none;                 /* Don't interfere with mouse events */
+    z-index: 1000;                       /* Above other elements */
+    min-width: 200px;                     /* Minimum width */
+    display: none;                        /* Hidden by default */
+}
+
+/* Tooltip Visible State - Shows when hovering over element */
+.tooltip.show {
+    display: block;                        /* Show tooltip */
+}
+

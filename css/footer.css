@@ -1,0 +1,37 @@
+/* ========================================
+   FOOTER STYLES
+   ========================================
+   Styles for the site footer at the bottom of each page.
+   Includes footer links and copyright information.
+*/
+
+/* Footer Container - Main footer section */
+.footer {
+    background: var(--nav-bg);            /* Same color as navigation */
+    color: white;                         /* White text */
+    padding: 1.5rem;                      /* Padding */
+    text-align: center;                   /* Center align text */
+    margin-top: 3rem;                     /* Space above footer */
+    width: 100%;                          /* Full width */
+}
+
+/* Footer Links Container - Horizontal list of footer links */
+.footer-links {
+    display: flex;                        /* Flexbox layout */
+    justify-content: center;              /* Center horizontally */
+    gap: 1.5rem;                         /* Space between links */
+    margin-bottom: 0.75rem;              /* Space below links */
+    flex-wrap: wrap;                      /* Wrap on smaller screens */
+}
+
+/* Footer Link - Individual link in footer */
+.footer-links a {
+    color: white;                         /* White text */
+    text-decoration: none;                /* No underline */
+}
+
+/* Footer Link Hover Effect */
+.footer-links a:hover {
+    text-decoration: underline;           /* Underline on hover */
+}
+

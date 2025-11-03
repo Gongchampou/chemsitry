@@ -1,0 +1,109 @@
+/* ========================================
+   LAYOUT STYLES
+   ========================================
+   Styles for main layout containers, grid systems, and spacing.
+   This controls the overall page structure and content organization.
+*/
+
+/* Main Container - Wrapper for page content
+   Centers content and provides padding */
+.container {
+    width: 100%;                         /* Full width */
+    margin: 0 auto;                      /* Center horizontally */
+    padding: 1.5rem 1.25rem;            /* Vertical and horizontal padding */
+}
+
+/* Card Component - Reusable content container
+   Used throughout the site for sections and content blocks */
+.card {
+    background: var(--card-bg);           /* Background from CSS variable */
+    border-radius: 8px;                   /* Rounded corners */
+    padding: 1.25rem;                     /* Internal padding */
+    margin-bottom: 1.5rem;               /* Space below card */
+    box-shadow: var(--shadow);            /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;  /* Smooth hover animations */
+    border: 1px solid transparent;        /* Transparent border (shows on hover) */
+}
+
+/* Card Hover Effect - Lifts card slightly on hover */
+.card:hover {
+    transform: translateY(-3px);         /* Move up 3px */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);  /* Stronger shadow */
+    border-color: var(--border-color);    /* Show border */
+}
+
+/* Card Headings - Level 2 (Main section titles) */
+.card h2 {
+    color: var(--primary-color);          /* Blue color */
+    margin-bottom: 0.75rem;               /* Space below heading */
+    font-size: 1.75rem;                   /* Large font size */
+    line-height: 1.3;                     /* Tight line spacing */
+    font-weight: 600;                     /* Semi-bold */
+}
+
+/* Card Headings - Level 3 (Subsection titles) */
+.card h3 {
+    color: var(--secondary-color);        /* Green color */
+    margin-top: 1.25rem;                  /* Space above heading */
+    margin-bottom: 0.5rem;                /* Space below heading */
+    font-size: 1.25rem;                   /* Medium font size */
+    line-height: 1.4;                     /* Comfortable line spacing */
+    font-weight: 600;                     /* Semi-bold */
+}
+
+/* Card Paragraphs - Text content within cards */
+.card p {
+    margin-bottom: 0.75rem;               /* Space below paragraph */
+    line-height: 1.7;                     /* Comfortable reading line height */
+}
+
+/* Remove margin from last paragraph in card */
+.card p:last-child {
+    margin-bottom: 0;                     /* No space after last paragraph */
+}
+
+/* Grid Layout System - Responsive grid for multiple items
+   Automatically adjusts columns based on available space */
+.grid {
+    display: grid;                        /* CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Auto-fit columns, minimum 280px */
+    gap: 1.5rem;                         /* Space between grid items */
+    margin: 1.5rem 0;                    /* Vertical margins */
+    width: 100%;                         /* Full width */
+}
+
+/* Branch Card - Clickable card for chemistry branches
+   Used on home page to navigate to different chemistry topics */
+.branch-card {
+    background: var(--card-bg);           /* Card background */
+    border-radius: 8px;                   /* Rounded corners */
+    padding: 1.5rem;                      /* Internal padding */
+    text-align: center;                   /* Center align content */
+    box-shadow: var(--shadow);            /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;  /* Smooth animations */
+    text-decoration: none;               /* Remove link underline */
+    color: var(--text-color);             /* Text color */
+    display: block;                       /* Block-level element */
+    border: 1px solid transparent;        /* Transparent border */
+}
+
+/* Branch Card Hover Effect */
+.branch-card:hover {
+    transform: translateY(-3px);          /* Lift up slightly */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);  /* Stronger shadow */
+    border-color: var(--primary-color);    /* Show primary color border */
+}
+
+/* Branch Card Heading */
+.branch-card h3 {
+    color: var(--primary-color);          /* Blue color */
+    margin-bottom: 0.75rem;               /* Space below */
+    font-size: 1.25rem;                   /* Font size */
+}
+
+/* Branch Icon - Large emoji/icon in branch cards */
+.branch-icon {
+    font-size: 2.5rem;                    /* Large icon size */
+    margin-bottom: 0.75rem;               /* Space below icon */
+}
+

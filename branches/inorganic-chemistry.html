@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Inorganic Chemistry: Periodic Table, Chemical Bonding, Coordination Compounds, and Crystal Field Theory with detailed explanations.">
+    <meta name="keywords" content="inorganic chemistry, periodic table, chemical bonding, coordination compounds, crystal field theory, transition metals">
+    <title>Inorganic Chemistry - Chemistry Education Portal</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">⚗️ Chemistry Portal</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#learning">Learning</a></li>
+                <li><a href="../library.html">Library</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode" data-tooltip="Switch to Dark Mode">🌙</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero" style="padding: 2rem;">
+            <h1>Inorganic Chemistry</h1>
+            <p>The study of inorganic compounds and their properties</p>
+        </section>
+
+        <section class="card">
+            <h2>Overview</h2>
+            <p>Inorganic chemistry studies compounds that typically do not contain carbon-hydrogen bonds. It covers metals, minerals, coordination compounds, and the behavior of elements across the periodic table.</p>
+        </section>
+
+        <section class="card">
+            <h2>Interactive Periodic Table</h2>
+            <p>Explore all elements with detailed information. <a href="../index.html#tools" style="color: var(--primary-color);">View full interactive periodic table →</a></p>
+            
+            <div class="periodic-table-container">
+                <input type="text" class="search-box" placeholder="Search elements...">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="alkali-metal">Alkali Metals</button>
+                    <button class="filter-btn" data-category="transition-metal">Transition Metals</button>
+                    <button class="filter-btn" data-category="noble-gas">Noble Gases</button>
+                </div>
+                <div class="periodic-table"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="collapsible-container">
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>📊 Periodic Table Trends</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <h3>Atomic Radius</h3>
+                            <ul>
+                                <li><strong>Down a group:</strong> Increases (more electron shells)</li>
+                                <li><strong>Across a period:</strong> Decreases (increased nuclear charge)</li>
+                            </ul>
+
+                            <h3>Ionization Energy</h3>
+                            <p>Energy required to remove an electron:</p>
+                            <ul>
+                                <li>Increases across periods</li>
+                                <li>Decreases down groups</li>
+                                <li>Noble gases have highest IEs</li>
+                            </ul>
+
+                            <h3>Electronegativity</h3>
+                            <p>Tendency to attract electrons:</p>
+                            <ul>
+                                <li><strong>Highest:</strong> Fluorine (4.0)</li>
+                                <li><strong>Trend:</strong> Increases up and right</li>
+                                <li>Metals have low electronegativity</li>
+                            </ul>
+
+                            <h3>Electron Affinity</h3>
+                            <p>Energy change when electron is added. Generally more negative (exothermic) for nonmetals.</p>
+
+                            <h3>Metallic Character</h3>
+                            <p>Decreases across periods, increases down groups. Metals are good conductors, malleable, ductile.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>🔗 Chemical Bonding</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <h3>Ionic Bonding</h3>
+                            <ul>
+                                <li>Transfer of electrons from metal to nonmetal</li>
+                                <li>Forms crystal lattice structures</li>
+                                <li>High melting/boiling points</li>
+                                <li>Conduct electricity when molten or dissolved</li>
+                                <li>Example: NaCl, MgO</li>
+                            </ul>
+
+                            <h3>Covalent Bonding</h3>
+                            <ul>
+                                <li>Sharing of electron pairs</li>
+                                <li>Can be polar or nonpolar</li>
+                                <li>Forms discrete molecules or network solids</li>
+                                <li>Example: H₂O, CO₂, diamond</li>
+                            </ul>
+
+                            <h3>Metallic Bonding</h3>
+                            <ul>
+                                <li>Delocalized electrons in metal lattice</li>
+                                <li>Results in conductivity, malleability</li>
+                                <li>Examples: Cu, Fe, Al</li>
+                            </ul>
+
+                            <h3>VSEPR Theory</h3>
+                            <p>Valence Shell Electron Pair Repulsion - predicts molecular geometry:</p>
+                            <ul>
+                                <li>Linear: 180°</li>
+                                <li>Trigonal planar: 120°</li>
+                                <li>Tetrahedral: 109.5°</li>
+                                <li>Octahedral: 90°</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>💎 Coordination Compounds</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <h3>Components</h3>
+                            <ul>
+                                <li><strong>Central Metal Ion:</strong> Usually transition metal</li>
+                                <li><strong>Ligands:</strong> Electron pair donors (NH₃, H₂O, Cl⁻, CN⁻)</li>
+                                <li><strong>Coordination Number:</strong> Number of ligands attached</li>
+                            </ul>
+
+                            <h3>Naming</h3>
+                            <ol>
+                                <li>Ligands (alphabetical) + metal</li>
+                                <li>Use -ate suffix for anions</li>
+                                <li>Use Roman numerals for metal oxidation state</li>
+                            </ol>
+                            <p><strong>Example:</strong> [Co(NH₃)₆]Cl₃ = Hexaamminecobalt(III) chloride</p>
+
+                            <h3>Coordination Geometries</h3>
+                            <ul>
+                                <li><strong>Linear:</strong> CN = 2</li>
+                                <li><strong>Tetrahedral:</strong> CN = 4</li>
+                                <li><strong>Square Planar:</strong> CN = 4 (common for d⁸ metals)</li>
+                                <li><strong>Octahedral:</strong> CN = 6 (most common)</li>
+                            </ul>
+
+                            <h3>Isomerism</h3>
+                            <ul>
+                                <li><strong>Geometric:</strong> cis/trans, fac/mer</li>
+                                <li><strong>Optical:</strong> Enantiomers (mirror images)</li>
+                                <li><strong>Linkage:</strong> Different atoms of same ligand bind</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>🌐 Crystal Field Theory</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <h3>Basic Concept</h3>
+                            <p>Ligands create an electric field that splits d-orbital energy levels. This explains color, magnetism, and geometry of transition metal complexes.</p>
+
+                            <h3>Octahedral Field</h3>
+                            <ul>
+                                <li>d orbitals split into t₂g (lower) and eg (higher)</li>
+                                <li>Δₒ = crystal field splitting energy</li>
+                                <li>Strong field: Large Δ, low spin</li>
+                                <li>Weak field: Small Δ, high spin</li>
+                            </ul>
+
+                            <h3>Tetrahedral Field</h3>
+                            <ul>
+                                <li>Inverted splitting: e (lower), t₂ (higher)</li>
+                                <li>Smaller splitting than octahedral (Δt ≈ 4/9 Δₒ)</li>
+                                <li>Usually high spin</li>
+                            </ul>
+
+                            <h3>Spectrochemical Series</h3>
+                            <p>Ligand strength (weak to strong):</p>
+                            <p>I⁻ < Br⁻ < Cl⁻ < F⁻ < OH⁻ < H₂O < NH₃ < en < CN⁻ < CO</p>
+
+                            <h3>Applications</h3>
+                            <ul>
+                                <li>Explains color of complexes (d-d transitions)</li>
+                                <li>Predicts magnetic properties</li>
+                                <li>Determines stability and geometry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>🧪 Main Group Elements</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <h3>Alkali Metals (Group 1)</h3>
+                            <ul>
+                                <li>Soft, reactive metals</li>
+                                <li>+1 oxidation state</li>
+                                <li>Form ionic compounds</li>
+                                <li>Examples: Na, K</li>
+                            </ul>
+
+                            <h3>Alkaline Earth Metals (Group 2)</h3>
+                            <ul>
+                                <li>Harder, less reactive than Group 1</li>
+                                <li>+2 oxidation state</li>
+                                <li>Examples: Mg, Ca</li>
+                            </ul>
+
+                            <h3>Halogens (Group 17)</h3>
+                            <ul>
+                                <li>Highly reactive nonmetals</li>
+                                <li>-1 oxidation state common</li>
+                                <li>Form diatomic molecules</li>
+                                <li>Examples: F₂, Cl₂, Br₂</li>
+                            </ul>
+
+                            <h3>Noble Gases (Group 18)</h3>
+                            <ul>
+                                <li>Inert, full valence shells</li>
+                                <li>Very low reactivity</li>
+                                <li>Examples: He, Ne, Ar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Learn More</h2>
+            <ul>
+                <li><a href="../index.html#tools" style="color: var(--primary-color);">Interactive Periodic Table</a></li>
+                <li><a href="../branches/physical-chemistry.html" style="color: var(--primary-color);">Physical Chemistry</a></li>
+                <li><a href="../branches/analytical-chemistry.html" style="color: var(--primary-color);">Analytical Chemistry</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../faq.html">FAQ</a>
+        </div>
+        <p>&copy; 2024 Chemistry Education Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/periodic-table.js"></script>
+</body>
+</html>
+

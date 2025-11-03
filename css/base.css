@@ -1,0 +1,63 @@
+/* ========================================
+   BASE STYLES - Global Styles & Variables
+   ========================================
+   This file contains CSS custom properties (variables) and base reset styles
+   that apply to the entire website. These styles are the foundation for
+   all other stylesheets.
+*/
+
+/* CSS Custom Properties (Variables) - Light Theme
+   These variables define the color scheme and can be easily changed
+   to modify the entire website's appearance */
+:root {
+    --primary-color: #2196F3;      /* Main blue color for links, buttons, highlights */
+    --secondary-color: #4CAF50;    /* Green accent color for secondary elements */
+    --accent-color: #FF9800;       /* Orange accent for special highlights */
+    --bg-color: #ffffff;            /* Main background color (white) */
+    --text-color: #212121;          /* Main text color (dark gray) */
+    --card-bg: #f5f5f5;             /* Background for cards and containers */
+    --border-color: #e0e0e0;       /* Border color for elements */
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);  /* Default box shadow */
+    --nav-bg: #1976D2;              /* Navigation bar background */
+}
+
+/* CSS Custom Properties (Variables) - Dark Theme
+   When [data-theme="dark"] is applied, these values override the light theme */
+[data-theme="dark"] {
+    --bg-color: #121212;            /* Dark background */
+    --text-color: #e0e0e0;          /* Light text for dark background */
+    --card-bg: #1e1e1e;             /* Dark card background */
+    --border-color: #333333;        /* Dark border color */
+    --shadow: 0 2px 8px rgba(0,0,0,0.3);  /* Stronger shadow for dark mode */
+    --nav-bg: #0d47a1;              /* Darker navigation background */
+}
+
+/* Universal Reset - Removes default browser styling
+   * selector applies to all elements */
+* {
+    margin: 0;                      /* Remove default margins */
+    padding: 0;                     /* Remove default padding */
+    box-sizing: border-box;         /* Include padding/border in width calculations */
+}
+
+/* HTML Root Element - Full width with no horizontal overflow */
+html {
+    width: 100%;                    /* Full viewport width */
+    overflow-x: hidden;             /* Prevent horizontal scrolling */
+}
+
+/* Body Element - Main container styling
+   Sets default font, colors, and smooth transitions */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Font stack */
+    line-height: 1.6;               /* Spacing between lines for readability */
+    color: var(--text-color);       /* Use CSS variable for text color */
+    background-color: var(--bg-color);  /* Use CSS variable for background */
+    transition: background-color 0.3s, color 0.3s;  /* Smooth theme transitions */
+    -webkit-font-smoothing: antialiased;  /* Better font rendering on WebKit browsers */
+    -moz-osx-font-smoothing: grayscale;   /* Better font rendering on Firefox/Mac */
+    width: 100%;                    /* Full width */
+    overflow-x: hidden;             /* Prevent horizontal scrolling */
+    padding-top: 60px;              /* Add padding to compensate for fixed navbar */
+}
+

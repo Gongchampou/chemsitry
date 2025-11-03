@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Chemistry educational website covering all branches from basic to advanced university level concepts. Interactive tools, quizzes, and learning resources.">
+    <meta name="keywords" content="chemistry, education, periodic table, chemical equations, organic chemistry, physical chemistry, inorganic chemistry, analytical chemistry, applied chemistry">
+    <meta name="author" content="Chemistry Education Portal">
+    <title>Chemistry Education Portal - Learn Chemistry from Basics to Advanced</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1976D2">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚗️ Chemistry Portal</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#learning">Learning Zone</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode" data-tooltip="Switch to Dark Mode">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="width: 100%;">
+        <div class="molecule-bg" style="width: 100%;">
+            <div class="molecule">H₂O</div>
+            <div class="molecule">CO₂</div>
+            <div class="molecule">NH₃</div>
+            <div class="molecule">CH₄</div>
+            <div class="molecule">NaCl</div>
+        </div>
+        <div style="position: relative; z-index: 1; width: 100%;">
+            <h1>Welcome to Chemistry Education Portal</h1>
+            <p>Explore the fascinating world of chemistry from atoms to complex reactions. Learn, practice, and master chemistry concepts with our interactive tools and comprehensive resources.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Introduction -->
+        <section class="card">
+            <h2>What is Chemistry?</h2>
+            <p>Chemistry is the scientific study of matter, its properties, composition, structure, and the changes it undergoes during chemical reactions. It bridges the physical sciences with life sciences and is essential to understanding the world around us.</p>
+            
+            <h3>Why Study Chemistry?</h3>
+            <ul style="margin-left: 1.5rem; margin-top: 0.75rem; line-height: 1.8;">
+                <li><strong>Foundation of Life:</strong> All living processes are chemical reactions.</li>
+                <li><strong>Medical Advances:</strong> Understanding biochemistry leads to new medicines and treatments.</li>
+                <li><strong>Technology:</strong> Materials science, electronics, and energy solutions depend on chemistry.</li>
+                <li><strong>Environment:</strong> Address climate change, pollution, and sustainability.</li>
+                <li><strong>Daily Life:</strong> From cooking to cleaning, chemistry is everywhere.</li>
+            </ul>
+
+            <h3>Real-World Applications</h3>
+            <p>Chemistry impacts every aspect of modern life: pharmaceuticals, agriculture, food science, materials engineering, environmental protection, and energy production. Whether developing new batteries, creating sustainable materials, or understanding biological processes, chemistry provides the foundation.</p>
+        </section>
+
+        <!-- Today's Fact -->
+        <section class="todays-fact">
+            <h2>💡 Did You Know?</h2>
+            <div class="fact-content">Loading fascinating chemistry fact...</div>
+        </section>
+
+        <!-- Chemistry Branches -->
+        <section class="card">
+            <h2>Explore Chemistry Branches</h2>
+            <div class="grid">
+                <a href="branches/physical-chemistry.html" class="branch-card">
+                    <div class="branch-icon">⚛️</div>
+                    <h3>Physical Chemistry</h3>
+                    <p>Thermodynamics, kinetics, quantum mechanics, and electrochemistry</p>
+                </a>
+                <a href="branches/organic-chemistry.html" class="branch-card">
+                    <div class="branch-icon">🔬</div>
+                    <h3>Organic Chemistry</h3>
+                    <p>Carbon compounds, reactions, mechanisms, and functional groups</p>
+                </a>
+                <a href="branches/inorganic-chemistry.html" class="branch-card">
+                    <div class="branch-icon">📊</div>
+                    <h3>Inorganic Chemistry</h3>
+                    <p>Periodic table, bonding, coordination compounds, and crystal structures</p>
+                </a>
+                <a href="branches/analytical-chemistry.html" class="branch-card">
+                    <div class="branch-icon">📈</div>
+                    <h3>Analytical Chemistry</h3>
+                    <p>Titrations, chromatography, spectroscopy, and chemical analysis</p>
+                </a>
+                <a href="branches/applied-chemistry.html" class="branch-card">
+                    <div class="branch-icon">🏭</div>
+                    <h3>Applied Chemistry</h3>
+                    <p>Industrial processes, environmental chemistry, and nanomaterials</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Interactive Tools -->
+        <section id="tools" class="card">
+            <h2>Interactive Tools</h2>
+            
+            <!-- Periodic Table -->
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3>Interactive Periodic Table</h3>
+                <p>Explore all 118 chemical elements with detailed information. Click on elements to view comprehensive details.</p>
+                <div class="periodic-table-container">
+                    <!-- Periodic Table Header Banner -->
+                    <div class="periodic-table-header">
+                        <h2>PERIODIC TABLE OF ELEMENTS</h2>
+                    </div>
+                    
+                    <input type="text" class="search-box" placeholder="Search elements by name, symbol, or atomic number...">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="alkali-metal">Alkali Metals</button>
+                        <button class="filter-btn" data-category="alkaline-earth">Alkaline Earth</button>
+                        <button class="filter-btn" data-category="transition-metal">Transition Metals</button>
+                        <button class="filter-btn" data-category="metalloid">Metalloids</button>
+                        <button class="filter-btn" data-category="nonmetal">Nonmetals</button>
+                        <button class="filter-btn" data-category="noble-gas">Noble Gases</button>
+                        <button class="filter-btn" data-category="lanthanide">Lanthanides</button>
+                        <button class="filter-btn" data-category="actinide">Actinides</button>
+                    </div>
+                    <div class="periodic-table"></div>
+                    <div class="periodic-table-lanthanoids"></div>
+                    <div class="periodic-table-actinoids"></div>
+                </div>
+                <a href="branches/inorganic-chemistry.html" style="color: var(--primary-color); text-decoration: none; margin-top: 1rem; display: inline-block;">
+                    Learn more about the Periodic Table →
+                </a>
+            </div>
+
+            <!-- Equation Balancer -->
+            <div class="balancer-container" style="margin-top: 2rem;">
+                <h3>Chemical Equation Balancer</h3>
+                <p>Balance chemical equations automatically. Enter reactants and products separated by + signs.</p>
+                <form id="equation-form">
+                    <div class="input-group">
+                        <label for="reactants">Reactants (e.g., H2 + O2):</label>
+                        <input type="text" id="reactants" placeholder="H2 + O2" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="products">Products (e.g., H2O):</label>
+                        <input type="text" id="products" placeholder="H2O" required>
+                    </div>
+                    <button type="submit" class="btn">Balance Equation</button>
+                    <div id="equation-result" class="result"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Learning Zone -->
+        <section id="learning" class="card">
+            <h2>Learning Zone</h2>
+            <p>Explore our comprehensive learning materials organized by topic and difficulty level.</p>
+            
+            <div class="grid" style="margin-top: 2rem;">
+                <div class="card">
+                    <h3>📚 Quick Quizzes</h3>
+                    <p>Test your knowledge with interactive multiple-choice quizzes covering all chemistry topics. Each question includes helpful hints!</p>
+                    <a href="#practice-quiz" class="btn" style="display: inline-block; margin-top: 1rem; text-decoration: none;">Start Quiz →</a>
+                </div>
+                <div class="card">
+                    <h3>🃏 Flashcards</h3>
+                    <p>Study key concepts with our interactive flashcard system. Flip cards to reveal definitions.</p>
+                    <a href="#flashcards" class="btn" style="display: inline-block; margin-top: 1rem; text-decoration: none;">View Flashcards</a>
+                </div>
+                <div class="card">
+                    <h3>📖 Topic Lessons</h3>
+                    <p>Dive deep into specific chemistry topics with detailed explanations, examples, and practice problems.</p>
+                    <a href="branches/physical-chemistry.html" style="color: var(--primary-color); text-decoration: none; margin-top: 1rem; display: inline-block;">
+                        Explore Topics →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quiz Container - Where quiz questions will be displayed -->
+            <div id="practice-quiz" class="quiz-container" style="display: block; margin-top: 2rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">Practice Quiz</h2>
+                
+                <!-- Quiz Size Selection Buttons -->
+                <div id="quiz-size-selection" style="margin-bottom: 2rem; padding: 1.5rem; background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 1rem; color: var(--text-color); font-size: 1.3rem;">Select Quiz Size:</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                        <button class="btn" data-quiz-topic="quiz5">5 Questions</button>
+                        <button class="btn" data-quiz-topic="quiz10">10 Questions</button>
+                        <button class="btn" data-quiz-topic="quiz20">20 Questions</button>
+                        <button class="btn" data-quiz-topic="quiz30">30 Questions</button>
+                        <button class="btn" data-quiz-topic="quiz40">40 Questions</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-content">
+                    <!-- Quiz questions and options will be dynamically inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Flashcards Section -->
+            <div id="flashcards" style="margin-top: 3rem;">
+                <h3>Chemistry Flashcards</h3>
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>What is an atom?</h4>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>The smallest unit of matter that retains the properties of an element. Consists of protons, neutrons, and electrons.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>What is a covalent bond?</h4>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>A chemical bond formed when two atoms share one or more pairs of electrons.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>What is pH?</h4>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>A scale measuring acidity or basicity. pH 7 is neutral, below 7 is acidic, above 7 is basic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>What is a mole?</h4>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>A unit of measurement equal to 6.022 × 10²³ particles (Avogadro's number).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>What is enthalpy?</h4>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>A thermodynamic quantity representing the total heat content of a system at constant pressure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>What is a catalyst?</h4>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>A substance that speeds up a chemical reaction without being consumed in the process.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <p>&copy; 2024 Chemistry Education Portal. All rights reserved. Educational use only.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/periodic-table.js"></script>
+    <script src="js/equation-balancer.js"></script>
+    <script src="js/quiz.js"></script>
+    <script>
+        // Flashcard flip functionality
+        document.querySelectorAll('.flashcard').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+        });
+    </script>
+</body>
+</html>
+

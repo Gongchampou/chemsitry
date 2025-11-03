@@ -1,0 +1,110 @@
+/* ========================================
+   RESPONSIVE DESIGN STYLES
+   ========================================
+   Media queries for mobile and tablet devices.
+   Adjusts layout, spacing, and font sizes for smaller screens.
+   Breakpoint: 768px (tablets and below)
+*/
+
+@media (max-width: 768px) {
+    /* ========================================
+       NAVIGATION (Mobile)
+       ======================================== */
+    
+    /* Smaller navbar padding on mobile */
+    .navbar {
+        padding: 0.625rem 0;             /* Reduced padding */
+        position: fixed !important;        /* Ensure it stays fixed on mobile too */
+        top: 0 !important;                 /* Always at top */
+        width: 100% !important;           /* Full width */
+    }
+    
+    /* Reduced container padding */
+    .nav-container {
+        padding: 0 1rem;                 /* Less horizontal padding */
+    }
+    
+    /* Stack navigation links vertically */
+    .nav-links {
+        flex-direction: column;           /* Vertical stack */
+        gap: 0.5rem;                     /* Smaller gap */
+        margin-top: 0.5rem;              /* Top margin */
+    }
+    
+    /* ========================================
+       HERO SECTION (Mobile)
+       ======================================== */
+    
+    /* Reduced hero padding */
+    .hero {
+        padding: 1.75rem 1rem;           /* Less padding */
+        width: 100%;                     /* Full width */
+    }
+    
+    /* Smaller hero heading */
+    .hero h1 {
+        font-size: 1.75rem;              /* Reduced from 2.25rem */
+        margin-bottom: 0.5rem;           /* Less margin */
+    }
+    
+    /* Smaller hero paragraph */
+    .hero p {
+        font-size: 1rem;                 /* Standard size */
+        padding: 0 0.5rem;               /* Less padding */
+    }
+    
+    /* ========================================
+       LAYOUT (Mobile)
+       ======================================== */
+    
+    /* Reduced container padding */
+    .container {
+        padding: 1rem;                   /* Less padding */
+        width: 100%;                     /* Full width */
+    }
+    
+    /* Smaller card padding */
+    .card {
+        padding: 1rem;                   /* Reduced padding */
+        margin-bottom: 1.25rem;          /* Less margin */
+    }
+    
+    /* Single column grid on mobile */
+    .grid {
+        grid-template-columns: 1fr;      /* Single column */
+        gap: 1.25rem;                    /* Gap between items */
+        margin: 1.25rem 0;               /* Vertical margins */
+    }
+    
+    /* Smaller branch card padding */
+    .branch-card {
+        padding: 1.25rem;                /* Reduced padding */
+    }
+    
+    /* ========================================
+       PERIODIC TABLE (Mobile)
+       ======================================== */
+    
+    /* Smaller periodic table on mobile */
+    .periodic-table {
+        grid-template-columns: repeat(18, 30px);  /* Smaller columns */
+        gap: 2px;                        /* Tighter gap */
+        font-size: 0.5rem;              /* Smaller font */
+    }
+    
+    /* Smaller element padding */
+    .element {
+        padding: 0.2rem;                 /* Minimal padding */
+    }
+    
+    /* ========================================
+       FOOTER (Mobile)
+       ======================================== */
+    
+    /* Reduced footer padding */
+    .footer {
+        padding: 1.25rem;                /* Less padding */
+        margin-top: 2rem;                /* Less top margin */
+    }
+}
+

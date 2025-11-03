@@ -1,0 +1,381 @@
+{
+  "categories": [
+    {
+      "id": "textbooks",
+      "name": "Textbooks",
+      "description": "Comprehensive chemistry textbooks covering all major branches",
+      "items": [
+        {
+          "id": "textbook-1",
+          "title": "General Chemistry: Principles and Modern Applications",
+          "author": "Ralph H. Petrucci, F. Geoffrey Herring, Jeffry D. Madura, Carey Bissonnette",
+          "edition": "11th Edition",
+          "year": 2017,
+          "publisher": "Pearson",
+          "isbn": "978-0132931281",
+          "description": "A comprehensive textbook covering fundamental principles of chemistry with modern applications.",
+          "category": "General Chemistry",
+          "level": "Undergraduate",
+          "pages": 1416,
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.8,
+          "tags": ["general chemistry", "principles", "modern applications"]
+        },
+        {
+          "id": "textbook-2",
+          "title": "Organic Chemistry",
+          "author": "Paula Yurkanis Bruice",
+          "edition": "8th Edition",
+          "year": 2017,
+          "publisher": "Pearson",
+          "isbn": "978-0134042282",
+          "description": "Clear, comprehensive, and accessible introduction to organic chemistry with extensive problem sets.",
+          "category": "Organic Chemistry",
+          "level": "Undergraduate",
+          "pages": 1344,
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.7,
+          "tags": ["organic chemistry", "mechanisms", "reactions"]
+        },
+        {
+          "id": "textbook-3",
+          "title": "Physical Chemistry: Thermodynamics, Structure, and Change",
+          "author": "Peter Atkins, Julio de Paula",
+          "edition": "10th Edition",
+          "year": 2014,
+          "publisher": "W.H. Freeman",
+          "isbn": "978-1429290197",
+          "description": "Comprehensive coverage of physical chemistry principles including thermodynamics, kinetics, and quantum mechanics.",
+          "category": "Physical Chemistry",
+          "level": "Undergraduate",
+          "pages": 1072,
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.6,
+          "tags": ["physical chemistry", "thermodynamics", "quantum mechanics"]
+        },
+        {
+          "id": "textbook-4",
+          "title": "Inorganic Chemistry",
+          "author": "Gary L. Miessler, Paul J. Fischer, Donald A. Tarr",
+          "edition": "5th Edition",
+          "year": 2013,
+          "publisher": "Pearson",
+          "isbn": "978-0321811059",
+          "description": "Modern approach to inorganic chemistry with emphasis on molecular orbital theory and bonding.",
+          "category": "Inorganic Chemistry",
+          "level": "Undergraduate",
+          "pages": 752,
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.5,
+          "tags": ["inorganic chemistry", "coordination compounds", "bonding"]
+        },
+        {
+          "id": "textbook-5",
+          "title": "Analytical Chemistry: An Introduction",
+          "author": "Douglas A. Skoog, Donald M. West, F. James Holler, Stanley R. Crouch",
+          "edition": "7th Edition",
+          "year": 2013,
+          "publisher": "Cengage Learning",
+          "isbn": "978-0495558281",
+          "description": "Introduction to modern analytical chemistry covering both classical and instrumental methods.",
+          "category": "Analytical Chemistry",
+          "level": "Undergraduate",
+          "pages": 1072,
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.7,
+          "tags": ["analytical chemistry", "instrumentation", "methods"]
+        }
+      ]
+    },
+    {
+      "id": "reference-books",
+      "name": "Reference Books",
+      "description": "Essential reference materials for chemistry research and study",
+      "items": [
+        {
+          "id": "ref-1",
+          "title": "CRC Handbook of Chemistry and Physics",
+          "author": "William M. Haynes (Editor)",
+          "edition": "100th Edition",
+          "year": 2019,
+          "publisher": "CRC Press",
+          "isbn": "978-1138561632",
+          "description": "The most comprehensive reference for physical and chemical data, constants, and formulas.",
+          "category": "Reference",
+          "level": "All Levels",
+          "pages": 2500,
+          "format": "Hardcover/PDF",
+          "link": "#",
+          "rating": 4.9,
+          "tags": ["reference", "data", "constants", "formulas"]
+        },
+        {
+          "id": "ref-2",
+          "title": "The Merck Index: An Encyclopedia of Chemicals, Drugs, and Biologicals",
+          "author": "Maryadele J. O'Neil (Editor)",
+          "edition": "15th Edition",
+          "year": 2013,
+          "publisher": "Royal Society of Chemistry",
+          "isbn": "978-1849736701",
+          "description": "Comprehensive encyclopedia of chemicals, drugs, and biological substances with monographs.",
+          "category": "Reference",
+          "level": "All Levels",
+          "pages": 2800,
+          "format": "Hardcover/Digital",
+          "link": "#",
+          "rating": 4.8,
+          "tags": ["reference", "chemicals", "drugs", "encyclopedia"]
+        },
+        {
+          "id": "ref-3",
+          "title": "March's Advanced Organic Chemistry: Reactions, Mechanisms, and Structure",
+          "author": "Michael B. Smith",
+          "edition": "8th Edition",
+          "year": 2020,
+          "publisher": "Wiley",
+          "isbn": "978-1119371793",
+          "description": "Comprehensive reference covering organic reaction mechanisms and structures.",
+          "category": "Organic Chemistry",
+          "level": "Advanced",
+          "pages": 2080,
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.9,
+          "tags": ["organic chemistry", "mechanisms", "advanced", "reference"]
+        }
+      ]
+    },
+    {
+      "id": "online-resources",
+      "name": "Online Resources",
+      "description": "Free and premium online chemistry resources and databases",
+      "items": [
+        {
+          "id": "online-1",
+          "title": "Khan Academy - Chemistry",
+          "author": "Khan Academy",
+          "description": "Free online courses covering chemistry from basics to advanced topics with video lectures and practice problems.",
+          "category": "Online Course",
+          "level": "All Levels",
+          "format": "Website/Video",
+          "link": "https://www.khanacademy.org/science/chemistry",
+          "rating": 4.8,
+          "free": true,
+          "tags": ["free", "video lectures", "practice problems", "all levels"]
+        },
+        {
+          "id": "online-2",
+          "title": "ChemSpider",
+          "author": "Royal Society of Chemistry",
+          "description": "Free chemical structure database providing access to over 100 million structures from hundreds of data sources.",
+          "category": "Database",
+          "level": "All Levels",
+          "format": "Website",
+          "link": "https://www.chemspider.com",
+          "rating": 4.7,
+          "free": true,
+          "tags": ["database", "chemical structures", "free", "search"]
+        },
+        {
+          "id": "online-3",
+          "title": "PubChem",
+          "author": "National Center for Biotechnology Information",
+          "description": "Open chemistry database at the National Institutes of Health (NIH) containing information on millions of compounds.",
+          "category": "Database",
+          "level": "All Levels",
+          "format": "Website",
+          "link": "https://pubchem.ncbi.nlm.nih.gov",
+          "rating": 4.9,
+          "free": true,
+          "tags": ["database", "compounds", "free", "NIH"]
+        },
+        {
+          "id": "online-4",
+          "title": "Chemistry LibreTexts",
+          "author": "LibreTexts Project",
+          "description": "Free, open-access textbook library covering all areas of chemistry with peer-reviewed content.",
+          "category": "Online Textbook",
+          "level": "All Levels",
+          "format": "Website",
+          "link": "https://chem.libretexts.org",
+          "rating": 4.6,
+          "free": true,
+          "tags": ["free textbook", "open access", "all levels"]
+        },
+        {
+          "id": "online-5",
+          "title": "Wolfram Alpha Chemistry",
+          "author": "Wolfram Research",
+          "description": "Computational chemistry tool for calculations, molecular properties, and chemical reactions.",
+          "category": "Computational Tool",
+          "level": "All Levels",
+          "format": "Website",
+          "link": "https://www.wolframalpha.com/examples/science-and-technology/chemistry",
+          "rating": 4.5,
+          "free": false,
+          "tags": ["computational", "calculations", "premium"]
+        }
+      ]
+    },
+    {
+      "id": "research-papers",
+      "name": "Research Papers",
+      "description": "Important research papers and journal articles in chemistry",
+      "items": [
+        {
+          "id": "paper-1",
+          "title": "The Nobel Prize in Chemistry 2020: Development of CRISPR-Cas9",
+          "author": "Emmanuelle Charpentier, Jennifer A. Doudna",
+          "journal": "Nature",
+          "year": 2020,
+          "description": "Nobel Prize-winning work on the development of a method for genome editing.",
+          "category": "Biochemistry",
+          "level": "Advanced",
+          "format": "PDF",
+          "link": "#",
+          "rating": 5.0,
+          "tags": ["Nobel Prize", "CRISPR", "genome editing", "biochemistry"]
+        },
+        {
+          "id": "paper-2",
+          "title": "Green Chemistry: Principles and Practice",
+          "author": "Paul T. Anastas, John C. Warner",
+          "journal": "Chemical Reviews",
+          "year": 2010,
+          "description": "Foundational paper on the principles and practices of green chemistry.",
+          "category": "Green Chemistry",
+          "level": "Advanced",
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.8,
+          "tags": ["green chemistry", "sustainability", "principles"]
+        },
+        {
+          "id": "paper-3",
+          "title": "Metal-Organic Frameworks: A New Class of Porous Materials",
+          "author": "Omar M. Yaghi",
+          "journal": "Journal of the American Chemical Society",
+          "year": 2003,
+          "description": "Seminal work on the synthesis and properties of metal-organic frameworks (MOFs).",
+          "category": "Materials Chemistry",
+          "level": "Advanced",
+          "format": "PDF",
+          "link": "#",
+          "rating": 4.9,
+          "tags": ["MOFs", "materials", "porous materials"]
+        }
+      ]
+    },
+    {
+      "id": "video-lectures",
+      "name": "Video Lectures",
+      "description": "Educational video series and lecture courses",
+      "items": [
+        {
+          "id": "video-1",
+          "title": "MIT OpenCourseWare: Introduction to Solid State Chemistry",
+          "author": "Prof. Donald Sadoway",
+          "description": "Complete MIT course on solid-state chemistry with video lectures and course materials.",
+          "category": "Solid State Chemistry",
+          "level": "Undergraduate",
+          "format": "Video",
+          "link": "https://ocw.mit.edu/courses/chemistry/",
+          "rating": 4.9,
+          "free": true,
+          "tags": ["MIT", "free", "lectures", "undergraduate"]
+        },
+        {
+          "id": "video-2",
+          "title": "Coursera: Advanced Chemistry",
+          "author": "Various Instructors",
+          "description": "Comprehensive online course series covering advanced chemistry topics with interactive assignments.",
+          "category": "General Chemistry",
+          "level": "Advanced",
+          "format": "Video/Course",
+          "link": "https://www.coursera.org",
+          "rating": 4.6,
+          "free": false,
+          "tags": ["online course", "advanced", "interactive"]
+        },
+        {
+          "id": "video-3",
+          "title": "Crash Course Chemistry",
+          "author": "Hank Green",
+          "description": "Entertaining and educational video series covering chemistry fundamentals in an accessible way.",
+          "category": "General Chemistry",
+          "level": "High School/Undergraduate",
+          "format": "Video",
+          "link": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr",
+          "rating": 4.7,
+          "free": true,
+          "tags": ["YouTube", "free", "entertaining", "fundamentals"]
+        }
+      ]
+    },
+    {
+      "id": "software-tools",
+      "name": "Software & Tools",
+      "description": "Chemistry software and computational tools",
+      "items": [
+        {
+          "id": "software-1",
+          "title": "Avogadro - Molecular Editor and Visualizer",
+          "author": "Open Source Community",
+          "description": "Free, open-source molecular editor and visualizer for computational chemistry and molecular modeling.",
+          "category": "Molecular Modeling",
+          "level": "All Levels",
+          "format": "Software",
+          "link": "https://avogadro.cc",
+          "rating": 4.7,
+          "free": true,
+          "tags": ["molecular modeling", "free", "open source", "visualization"]
+        },
+        {
+          "id": "software-2",
+          "title": "ChemDraw",
+          "author": "PerkinElmer",
+          "description": "Industry-standard chemical structure drawing and editing software used by chemists worldwide.",
+          "category": "Chemical Drawing",
+          "level": "All Levels",
+          "format": "Software",
+          "link": "https://www.perkinelmer.com/product/chemdraw-professional-chemdrawpro",
+          "rating": 4.8,
+          "free": false,
+          "tags": ["structure drawing", "professional", "industry standard"]
+        },
+        {
+          "id": "software-3",
+          "title": "Gaussian - Computational Chemistry Software",
+          "author": "Gaussian, Inc.",
+          "description": "Powerful software for electronic structure calculations including DFT, ab initio, and semi-empirical methods.",
+          "category": "Computational Chemistry",
+          "level": "Advanced",
+          "format": "Software",
+          "link": "https://gaussian.com",
+          "rating": 4.9,
+          "free": false,
+          "tags": ["computational", "DFT", "ab initio", "professional"]
+        },
+        {
+          "id": "software-4",
+          "title": "JMOL - Molecular Viewer",
+          "author": "Open Source Community",
+          "description": "Free, open-source molecular viewer for 3D chemical structures and crystal structures.",
+          "category": "Molecular Viewer",
+          "level": "All Levels",
+          "format": "Software/Web",
+          "link": "https://jmol.sourceforge.net",
+          "rating": 4.6,
+          "free": true,
+          "tags": ["3D viewer", "free", "open source", "crystal structures"]
+        }
+      ]
+    }
+  ]
+}
+

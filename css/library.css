@@ -1,0 +1,424 @@
+/* ========================================
+   LIBRARY PAGE STYLES
+   ========================================
+   Styles for the chemistry library page displaying
+   textbooks, reference books, online resources, and more.
+*/
+
+/* ========================================
+   LIBRARY HEADER
+   ======================================== */
+
+/* Library Hero Section */
+.library-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.library-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.library-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ========================================
+   FILTERS AND SEARCH
+   ======================================== */
+
+/* Filter Container */
+.library-filters {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filter-row:last-child {
+    margin-bottom: 0;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.filter-group input {
+    padding-left: 2.5rem;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+/* Clear Filters Button */
+.clear-filters-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.clear-filters-btn:hover {
+    background: #F57C00;
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   CATEGORY TABS
+   ======================================== */
+
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.category-tab {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.category-tab:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.category-tab.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* ========================================
+   LIBRARY ITEMS GRID
+   ======================================== */
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ========================================
+   LIBRARY ITEM CARD
+   ======================================== */
+
+.library-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.library-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Item Header */
+.item-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.item-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.item-author {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Item Body */
+.item-body {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.item-description {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.item-detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.item-detail-label {
+    font-weight: 600;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.item-detail-value {
+    color: var(--text-color);
+}
+
+/* Tags */
+.item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Rating */
+.item-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.rating-stars {
+    color: #FFC107;
+    font-size: 1.1rem;
+}
+
+.rating-value {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Item Footer */
+.item-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.item-link {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.item-link:hover {
+    background: #1976D2;
+    transform: translateY(-1px);
+}
+
+.item-link.free {
+    background: var(--secondary-color);
+}
+
+.item-link.free:hover {
+    background: #388E3C;
+}
+
+/* Badge for Free Resources */
+.free-badge {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Premium Badge */
+.premium-badge {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* ========================================
+   NO RESULTS MESSAGE
+   ======================================== */
+
+.no-results {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.no-results h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.no-results p {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* ========================================
+   LOADING STATE
+   ======================================== */
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.loading::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .library-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .library-hero p {
+        font-size: 1rem;
+    }
+    
+    .library-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-row {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .category-tabs {
+        gap: 0.5rem;
+    }
+    
+    .category-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+

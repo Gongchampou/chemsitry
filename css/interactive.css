@@ -1,0 +1,223 @@
+/* ========================================
+   INTERACTIVE COMPONENTS STYLES
+   ========================================
+   Styles for interactive learning components: quizzes, flashcards,
+   collapsible sections, and equation balancer.
+*/
+
+/* ========================================
+   QUIZ STYLES
+   ======================================== */
+
+/* Quiz Container - Wrapper for quiz content */
+.quiz-container {
+    background: var(--card-bg);           /* Card background */
+    padding: 1.5rem;                      /* Padding */
+    border-radius: 8px;                   /* Rounded corners */
+    margin: 1.5rem 0;                    /* Vertical margins */
+}
+
+/* Question Container - Individual quiz question */
+.question {
+    margin-bottom: 1.25rem;               /* Space below question */
+}
+
+/* Hint Button - Button to show hints */
+.hint-btn {
+    background: var(--accent-color) !important;  /* Orange background */
+    border: none !important;
+    color: white !important;
+    padding: 0.625rem 1.25rem !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s !important;
+}
+
+.hint-btn:hover {
+    background: #F57C00 !important;  /* Darker orange on hover */
+    transform: translateY(-1px);
+}
+
+/* Hint Display - Shows hint text */
+.hint-display {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Options List - List of answer choices */
+.options {
+    list-style: none;                     /* Remove bullets */
+}
+
+/* Option Item - Individual answer choice */
+.option {
+    padding: 0.875rem;                    /* Padding */
+    margin: 0.375rem 0;                  /* Vertical margins */
+    background: var(--bg-color);         /* Background */
+    border: 2px solid var(--border-color);  /* Border */
+    border-radius: 5px;                   /* Rounded corners */
+    cursor: pointer;                      /* Pointer cursor */
+    transition: all 0.3s;                 /* Smooth transitions */
+}
+
+/* Option Hover Effect */
+.option:hover {
+    border-color: var(--primary-color);   /* Blue border */
+    background: var(--card-bg);           /* Card background */
+}
+
+/* Selected Option - When user clicks an answer */
+.option.selected {
+    background: var(--primary-color);     /* Blue background */
+    color: white;                         /* White text */
+    border-color: var(--primary-color);   /* Blue border */
+}
+
+/* Correct Answer - Shows after quiz submission */
+.option.correct {
+    background: var(--secondary-color);   /* Green background */
+    color: white;                         /* White text */
+}
+
+/* Incorrect Answer - Shows after quiz submission */
+.option.incorrect {
+    background: #f44336;                  /* Red background */
+    color: white;                         /* White text */
+}
+
+/* Quiz Result - Final score display */
+.quiz-result {
+    margin-top: 2rem;                     /* Space above */
+    padding: 1rem;                       /* Padding */
+    text-align: center;                   /* Center align */
+    font-size: 1.2rem;                   /* Larger font */
+    font-weight: bold;                    /* Bold text */
+}
+
+/* ========================================
+   FLASHCARD STYLES
+   ======================================== */
+
+/* Flashcard Container - Grid of flashcards */
+.flashcard-container {
+    display: grid;                        /* CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  /* Responsive columns */
+    gap: 1rem;                           /* Gap between cards */
+    margin: 1.5rem 0;                    /* Vertical margins */
+}
+
+/* Flashcard - Individual study card with flip animation */
+.flashcard {
+    aspect-ratio: 1.5;                   /* 3:2 aspect ratio */
+    perspective: 1000px;                 /* 3D perspective for flip */
+    cursor: pointer;                      /* Pointer cursor */
+}
+
+/* Flashcard Inner - Container for front and back */
+.flashcard-inner {
+    position: relative;                   /* Positioning context */
+    width: 100%;                         /* Full width */
+    height: 100%;                         /* Full height */
+    transition: transform 0.6s;           /* Smooth flip animation */
+    transform-style: preserve-3d;         /* 3D transforms */
+}
+
+/* Flipped Flashcard - When clicked, rotates 180 degrees */
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);           /* Rotate to show back */
+}
+
+/* Flashcard Front & Back - Both sides of the card */
+.flashcard-front,
+.flashcard-back {
+    position: absolute;                   /* Absolute positioning */
+    width: 100%;                         /* Full width */
+    height: 100%;                         /* Full height */
+    backface-visibility: hidden;         /* Hide back when viewing front */
+    border-radius: 8px;                   /* Rounded corners */
+    padding: 1.25rem;                    /* Padding */
+    display: flex;                        /* Flexbox for centering */
+    align-items: center;                  /* Vertically center */
+    justify-content: center;              /* Horizontally center */
+    box-shadow: var(--shadow);            /* Shadow */
+    background: var(--card-bg);          /* Background */
+    border: 2px solid var(--border-color);  /* Border */
+}
+
+/* Flashcard Back - Question side (flipped) */
+.flashcard-back {
+    transform: rotateY(180deg);           /* Rotated 180 degrees initially */
+    background: var(--primary-color);     /* Blue background */
+    color: white;                         /* White text */
+}
+
+/* ========================================
+   COLLAPSIBLE SECTIONS
+   ========================================
+   Expandable/collapsible content sections used in branch pages.
+*/
+
+/* Collapsible Container - Wrapper for collapsible content */
+.collapsible {
+    background: var(--card-bg);           /* Card background */
+    border: 2px solid var(--border-color);  /* Border */
+    border-radius: 5px;                   /* Rounded corners */
+    margin-bottom: 1rem;                  /* Space below */
+}
+
+/* Collapsible Header - Clickable title bar */
+.collapsible-header {
+    padding: 0.875rem 1rem;              /* Padding */
+    cursor: pointer;                      /* Pointer cursor */
+    display: flex;                        /* Flexbox layout */
+    justify-content: space-between;       /* Space between title and arrow */
+    align-items: center;                  /* Vertically center */
+    font-weight: 600;                     /* Semi-bold */
+    font-size: 1rem;                     /* Font size */
+}
+
+/* Collapsible Header Hover Effect */
+.collapsible-header:hover {
+    background: var(--bg-color);         /* Background color change */
+}
+
+/* Collapsible Content - Expandable content area */
+.collapsible-content {
+    max-height: 0;                       /* Collapsed height */
+    overflow: hidden;                     /* Hide overflow */
+    transition: max-height 0.3s;          /* Smooth expansion */
+}
+
+/* Collapsible Content Open - Expanded state */
+.collapsible-content.open {
+    max-height: 1000px;                   /* Expanded height */
+}
+
+/* Collapsible Body - Inner content padding */
+.collapsible-body {
+    padding: 0.875rem 1rem;              /* Padding */
+}
+
+/* ========================================
+   EQUATION BALANCER
+   ======================================== */
+
+/* Balancer Container - Wrapper for equation balancer form */
+.balancer-container {
+    background: var(--card-bg);           /* Card background */
+    padding: 1.5rem;                     /* Padding */
+    border-radius: 8px;                   /* Rounded corners */
+    margin: 1.5rem 0;                    /* Vertical margins */
+}
+

@@ -1,0 +1,72 @@
+/* ========================================
+   HERO SECTION STYLES
+   ========================================
+   Styles for the hero/banner section at the top of pages.
+   Includes the gradient background and molecule animation.
+*/
+
+/* Hero Section - Main banner area
+   Full-width section with gradient background
+   Margin-top compensates for fixed navbar */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));  /* Blue to green gradient */
+    color: white;                         /* White text */
+    padding: 2.5rem 1.5rem;               /* Vertical and horizontal padding */
+    text-align: center;                   /* Center align text */
+    width: 100%;                          /* Full width */
+    margin-top: 0;                        /* No top margin needed (body padding handles it) */
+}
+
+/* Hero Heading - Main title in hero section */
+.hero h1 {
+    font-size: 2.25rem;                   /* Large font size */
+    margin-bottom: 0.75rem;               /* Space below heading */
+    line-height: 1.2;                     /* Tight line height for large text */
+}
+
+/* Hero Paragraph - Subtitle/description text */
+.hero p {
+    font-size: 1.1rem;                    /* Slightly larger than body text */
+    max-width: 1000px;                    /* Limit width for readability */
+    margin: 0 auto;                       /* Center horizontally */
+    line-height: 1.6;                     /* Comfortable line spacing */
+    padding: 0 1rem;                       /* Horizontal padding */
+}
+
+/* Molecule Background - Animated background container
+   Container for floating molecule animations */
+.molecule-bg {
+    position: relative;                    /* Positioning context */
+    overflow: hidden;                      /* Hide overflow */
+    height: 200px;                        /* Fixed height */
+    width: 100%;                          /* Full width */
+    background: linear-gradient(135deg, #1976D2, #42A5F5);  /* Blue gradient */
+}
+
+/* Individual Molecule Elements
+   Floating animated chemistry formulas */
+.molecule {
+    position: absolute;                    /* Absolute positioning for animation */
+    width: 100px;                         /* Molecule width */
+    height: 100px;                        /* Molecule height */
+    animation: float 20s infinite;        /* Continuous floating animation */
+    opacity: 0.3;                         /* Semi-transparent */
+}
+
+/* Molecule Positioning - Distribute across width with delays */
+.molecule:nth-child(1) { left: 10%; animation-delay: 0s; }    /* Leftmost */
+.molecule:nth-child(2) { left: 30%; animation-delay: 2s; }    /* Left-center */
+.molecule:nth-child(3) { left: 50%; animation-delay: 4s; }    /* Center */
+.molecule:nth-child(4) { left: 70%; animation-delay: 6s; }    /* Right-center */
+.molecule:nth-child(5) { left: 90%; animation-delay: 8s; }    /* Rightmost */
+
+/* Float Animation - Makes molecules move up and down and rotate */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg);  /* Start and end position */
+    }
+    50% { 
+        transform: translateY(-50px) rotate(180deg);  /* Middle position */
+    }
+}
+
