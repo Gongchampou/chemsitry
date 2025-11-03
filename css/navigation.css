@@ -61,6 +61,22 @@
     opacity: 0.8;                        /* Slightly transparent on hover */
 }
 
+/* Active Navigation Link - Highlights current page */
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.25);  /* Light background highlight */
+    padding: 0.5rem 1rem;                    /* Padding for background */
+    border-radius: 5px;                      /* Rounded corners */
+    font-weight: 600;                        /* Bold text */
+    opacity: 1;                              /* Full opacity */
+    transition: all 0.3s;                    /* Smooth transitions */
+}
+
+/* Active link hover - Slightly darker on hover */
+.nav-links a.active:hover {
+    background: rgba(255, 255, 255, 0.35);  /* Darker background on hover */
+    opacity: 1;                              /* Full opacity */
+}
+
 /* Theme Toggle Button
    Small icon-only button to switch between light and dark themes */
 .theme-toggle {

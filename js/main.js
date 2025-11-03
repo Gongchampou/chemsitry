@@ -19,6 +19,103 @@
 */
 document.addEventListener('DOMContentLoaded', function() {
     /* ========================================
+       ACTIVE NAVIGATION LINK
+       ========================================
+       Highlights the current page link in navigation.
+    */
+    
+    // Get current page URL
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    const currentHash = window.location.hash;
+    const currentFullPath = currentPath + currentHash;
+    
+    // Check if we're on the home page (index.html or root)
+    const isHomePage = currentPage === '' || currentPage === 'index.html' || currentPath.endsWith('/') || currentPath === '/';
+    
+    // Find all navigation links
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        // Get link href and clean it up
+        let linkHref = link.getAttribute('href');
+        if (!linkHref) return;
+        
+        // Remove active class first (will re-add if matches)
+        link.classList.remove('active');
+        
+        // Handle links that are just anchors (starting with #)
+        if (linkHref.startsWith('#')) {
+            // Only mark active if we're on home page AND hash matches
+            if (isHomePage && currentHash === linkHref) {
+                link.classList.add('active');
+            }
+            return; // Done processing this link
+        }
+        
+        // For links with pages, extract both page and hash
+        let linkPage = '';
+        let linkHash = '';
+        
+        // Split href into page and hash parts
+        if (linkHref.includes('#')) {
+            const parts = linkHref.split('#');
+            linkPage = parts[0];
+            linkHash = '#' + parts[1];
+        } else {
+            linkPage = linkHref;
+        }
+        
+        // Normalize link page - extract just the filename
+        if (linkPage.includes('/')) {
+            linkPage = linkPage.split('/').pop();
+        }
+        
+        // Handle relative paths (../)
+        if (linkHref.includes('../')) {
+            try {
+                // Resolve relative path properly
+                const baseUrl = window.location.origin + currentPath.substring(0, currentPath.lastIndexOf('/')) + '/';
+                const resolvedUrl = new URL(linkHref, baseUrl);
+                linkPage = resolvedUrl.pathname.split('/').pop();
+            } catch (e) {
+                // Fallback: simple string replacement
+                linkPage = linkHref.replace(/\.\.\//g, '').split('/').pop().split('#')[0];
+            }
+        }
+        
+        // Normalize page names (empty or index variations = 'index.html')
+        if (!linkPage || linkPage === '' || linkPage === 'index.html') {
+            linkPage = 'index.html';
+        }
+        
+        // Normalize current page
+        const normalizedCurrentPage = (!currentPage || currentPage === '' || currentPage === 'index.html') ? 'index.html' : currentPage;
+        
+        // Check if this link matches the current page
+        if (linkPage === normalizedCurrentPage) {
+            // If link has a hash (like index.html#tools)
+            if (linkHash) {
+                // Mark active only if hash matches
+                if (currentHash === linkHash && isHomePage) {
+                    link.classList.add('active');
+                }
+            } else {
+                // Link without hash (regular page link)
+                if (linkPage === 'index.html') {
+                    // Home link: active if on home page AND no hash
+                    if (isHomePage && !currentHash) {
+                        link.classList.add('active');
+                    }
+                } else {
+                    // Other pages: active if page matches
+                    link.classList.add('active');
+                }
+            }
+        }
+    });
+    
+    /* ========================================
        THEME TOGGLE FUNCTIONALITY
        ========================================
        Allows users to switch between light and dark themes.
