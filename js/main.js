@@ -17,24 +17,28 @@
    Waits for HTML to fully load before running JavaScript.
    This ensures all elements exist before we try to access them.
 */
-document.addEventListener('DOMContentLoaded', function() {
-    /* ========================================
-       ACTIVE NAVIGATION LINK
-       ========================================
-       Highlights the current page link in navigation.
-    */
-    
+/* ========================================
+   ACTIVE NAVIGATION LINK FUNCTION
+   ========================================
+   Highlights the current page link in navigation.
+   This function is called on page load and when hash changes.
+*/
+function updateActiveNavLink() {
     // Get current page URL
     const currentPath = window.location.pathname;
     const currentPage = currentPath.split('/').pop() || 'index.html';
     const currentHash = window.location.hash;
-    const currentFullPath = currentPath + currentHash;
     
     // Check if we're on the home page (index.html or root)
-    const isHomePage = currentPage === '' || currentPage === 'index.html' || currentPath.endsWith('/') || currentPath === '/';
+    const isHomePage = currentPage === '' || currentPage === 'index.html' || currentPath.endsWith('/') || currentPath === '/' || currentPath.includes('index.html');
     
     // Find all navigation links
     const navLinks = document.querySelectorAll('.nav-links a');
+    if (navLinks.length === 0) {
+        // Links not loaded yet, try again after a short delay
+        setTimeout(updateActiveNavLink, 50);
+        return;
+    }
     
     navLinks.forEach(link => {
         // Get link href and clean it up
@@ -114,6 +118,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+}
+
+// Also listen for hash changes (for smooth scrolling to anchors)
+window.addEventListener('hashchange', function() {
+    updateActiveNavLink();
+});
+
+// Listen for popstate (back/forward button)
+window.addEventListener('popstate', function() {
+    // Small delay to ensure URL has updated
+    setTimeout(updateActiveNavLink, 10);
+});
+
+// Also update when page is fully loaded (fallback)
+window.addEventListener('load', function() {
+    updateActiveNavLink();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Update active nav link on page load
+    updateActiveNavLink();
     
     /* ========================================
        THEME TOGGLE FUNCTIONALITY
