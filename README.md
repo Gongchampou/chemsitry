@@ -1,5 +1,5 @@
 # Chemistry Education Portal
-- 🌐 ![LINK here](https://chemsitry.pages.dev)
+- 🌐 [LINK here](https://chemsitry.pages.dev)
 
 A comprehensive, static Chemistry educational website covering everything from basic chemistry concepts to advanced university-level topics. Built with HTML5, CSS3, and vanilla JavaScript - no frameworks, no backend, no database required.
 
